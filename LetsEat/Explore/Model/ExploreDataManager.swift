@@ -25,4 +25,12 @@ class ExploreDataManager {
         }
         return [[:]]
     }
+    
+    func numberOfExploreElements() -> Int {
+        exploreItems.count
+    }
+    
+    func exploreItem(at index: Int) -> ExploreItem {
+        exploreItems[index]
+    }
 }
