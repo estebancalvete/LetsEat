@@ -18,6 +18,9 @@
 		5B8EB6E8284134C5007A4A58 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB6E7284134C5007A4A58 /* ExploreItem.swift */; };
 		5B8EB6EA28413620007A4A58 /* ExploreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB6E928413620007A4A58 /* ExploreDataManager.swift */; };
 		5BFABEB82844CD5A00F2C454 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABEB72844CD5A00F2C454 /* ExploreCell.swift */; };
+		5BFABEBD2844DC6C00F2C454 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABEBC2844DC6C00F2C454 /* LocationViewController.swift */; };
+		5BFABEBF2844E14D00F2C454 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFABEBE2844E14D00F2C454 /* Locations.plist */; };
+		5BFABEC12844E36600F2C454 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABEC02844E36600F2C454 /* LocationDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		5B8EB6E7284134C5007A4A58 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		5B8EB6E928413620007A4A58 /* ExploreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDataManager.swift; sourceTree = "<group>"; };
 		5BFABEB72844CD5A00F2C454 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
+		5BFABEBC2844DC6C00F2C454 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5BFABEBE2844E14D00F2C454 /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		5BFABEC02844E36600F2C454 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		5B8EB6C9283FE64E007A4A58 /* LetsEat */ = {
 			isa = PBXGroup;
 			children = (
+				5BFABEB92844DAD400F2C454 /* Location */,
 				5B8EB6E1284103CB007A4A58 /* Restaurants */,
 				5B8EB6DE2840D9F7007A4A58 /* Explore */,
 				5B8EB6CA283FE64E007A4A58 /* AppDelegate.swift */,
@@ -112,6 +119,32 @@
 				5BFABEB72844CD5A00F2C454 /* ExploreCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5BFABEB92844DAD400F2C454 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5BFABEBB2844DAFD00F2C454 /* Model */,
+				5BFABEBA2844DAF500F2C454 /* View */,
+				5BFABEBC2844DC6C00F2C454 /* LocationViewController.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		5BFABEBA2844DAF500F2C454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BFABEBB2844DAFD00F2C454 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BFABEBE2844E14D00F2C454 /* Locations.plist */,
+				5BFABEC02844E36600F2C454 /* LocationDataManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +208,7 @@
 				5B8EB6E628413431007A4A58 /* ExploreData.plist in Resources */,
 				5B8EB6D7283FE652007A4A58 /* LaunchScreen.storyboard in Resources */,
 				5B8EB6D4283FE652007A4A58 /* Assets.xcassets in Resources */,
+				5BFABEBF2844E14D00F2C454 /* Locations.plist in Resources */,
 				5B8EB6D2283FE64E007A4A58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +227,8 @@
 				5B8EB6E02840DA79007A4A58 /* ExploreViewController.swift in Sources */,
 				5B8EB6EA28413620007A4A58 /* ExploreDataManager.swift in Sources */,
 				5BFABEB82844CD5A00F2C454 /* ExploreCell.swift in Sources */,
+				5BFABEC12844E36600F2C454 /* LocationDataManager.swift in Sources */,
+				5BFABEBD2844DC6C00F2C454 /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
