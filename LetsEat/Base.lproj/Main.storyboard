@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="oft-tO-VUx">
             <objects>
-                <viewController id="efO-Nm-LVQ" sceneMemberID="viewController">
+                <viewController id="efO-Nm-LVQ" customClass="MapViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyb-If-fii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +32,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tzj-aS-UnJ"/>
+                    <connections>
+                        <outlet property="mapView" destination="Ss4-rl-hz9" id="hq9-1T-tiz"/>
+                        <segue destination="u6m-Ss-Cem" kind="show" identifier="showDetail" id="4Qn-FB-HiM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVk-ft-b0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264.80000000000001" y="23.838080959520241"/>
+        </scene>
+        <!--RestaurantDetail-->
+        <scene sceneID="7mc-lB-NZ2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RestaurantDetail" id="u6m-Ss-Cem" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dgi-bV-jmG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M40-PK-Y6U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="924" y="119"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="bXo-Ze-4Qy">
@@ -100,7 +114,7 @@
                                         <connections>
                                             <outlet property="exploreImageView" destination="xy4-oy-scG" id="SXZ-fe-2mQ"/>
                                             <outlet property="exploreNameLabel" destination="ehS-9S-LGF" id="0ci-FF-hSv"/>
-                                            <segue destination="QX2-p3-tac" kind="show" id="tub-mS-kbA"/>
+                                            <segue destination="QX2-p3-tac" kind="show" id="2MP-MS-LJy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

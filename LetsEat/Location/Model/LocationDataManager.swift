@@ -7,21 +7,11 @@
 
 import Foundation
 
-class LocationDataManager {
+class LocationDataManager: DataManager {
     private var locations: [String] = []
     
-    private func loadData() -> [[String: String]] {
-        let decoder = PropertyListDecoder()
-        if let path = Bundle.main.path(forResource: "Locations", ofType: "plist"),
-           let locationsData = FileManager.default.contents(atPath: path),
-           let locations = try? decoder.decode([[String: String]].self, from: locationsData) {
-            return locations
-        }
-        return [[:]]
-    }
-    
     func fetch() {
-        for location in loadData() {
+        for location in loadPlist(file: "Locations") {
             if let city = location["city"], let state = location["state"] {
                 locations.append("\(city), \(state)")
             }
