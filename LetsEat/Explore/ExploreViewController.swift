@@ -11,11 +11,32 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     let manager = ExploreDataManager()
+    var selectedCity: LocationItem?
+    var headerView: ExploreHeaderView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case Segue.locationList.rawValue:
+            showLocationList(segue: segue)
+        case Segue.restaurantList.rawValue:
+            showRestaurantList(segue: segue)
+        default:
+            print("Segue not added")
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == Segue.restaurantList.rawValue, selectedCity ==  nil {
+            showLocationRequiredAlert()
+            return false
+        }
+        return true
     }
     
 }
@@ -28,7 +49,35 @@ private extension ExploreViewController {
         manager.fetch()
     }
     
+    func showLocationList(segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController, let viewController = navController.topViewController as? LocationViewController else { return }
+        viewController.selectedCity = selectedCity
+    }
+    
+    func showRestaurantList(segue: UIStoryboardSegue) {
+        if let viewController = segue.destination as? RestaurantListViewController, let city = selectedCity, let index = collectionView.indexPathsForSelectedItems?.first?.row {
+            viewController.selectedCuisine = manager.exploreItem(at: index).name
+            viewController.selectedCity = city
+        }
+    }
+    
+    func showLocationRequiredAlert() {
+        let alertController = UIAlertController(title: "Location Needed", message: "Please select a location", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func unwindLocationCancel(segue: UIStoryboardSegue) {}
+    
+    @IBAction func unwindLocationDone(segue: UIStoryboardSegue) {
+        if let viewController = segue.source as? LocationViewController {
+            selectedCity = viewController.selectedCity
+            if let location = selectedCity {
+                headerView.locationLabel.text = location.cityAndState
+            }
+        }
+    }
     
 }
 
@@ -37,7 +86,8 @@ private extension ExploreViewController {
 extension ExploreViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
+        headerView = header as? ExploreHeaderView
         return headerView
     }
     

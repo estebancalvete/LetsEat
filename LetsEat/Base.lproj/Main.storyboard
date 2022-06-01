@@ -114,11 +114,11 @@
                                         <connections>
                                             <outlet property="exploreImageView" destination="xy4-oy-scG" id="SXZ-fe-2mQ"/>
                                             <outlet property="exploreNameLabel" destination="ehS-9S-LGF" id="0ci-FF-hSv"/>
-                                            <segue destination="QX2-p3-tac" kind="show" id="2MP-MS-LJy"/>
+                                            <segue destination="QX2-p3-tac" kind="show" identifier="restaurantList" id="2MP-MS-LJy"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="xo0-hN-rbQ">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="xo0-hN-rbQ" customClass="ExploreHeaderView" customModule="LetsEat" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -152,7 +152,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="btn-location"/>
                                                     <connections>
-                                                        <segue destination="G59-dx-CcJ" kind="presentation" id="ljY-vM-Sci"/>
+                                                        <segue destination="G59-dx-CcJ" kind="presentation" identifier="locationList" id="ljY-vM-Sci"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32h-PN-fux">
@@ -185,6 +185,9 @@
                                         <constraint firstItem="0rY-3w-uoY" firstAttribute="leading" secondItem="xo0-hN-rbQ" secondAttribute="leading" id="OJw-cm-cRN"/>
                                         <constraint firstItem="0rY-3w-uoY" firstAttribute="top" secondItem="xo0-hN-rbQ" secondAttribute="top" id="lQ2-RD-nMl"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="locationLabel" destination="gu0-1j-xGG" id="7uY-j4-55B"/>
+                                    </connections>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="skX-Cc-No8" id="qMe-Gv-Go7"/>
@@ -228,7 +231,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="pzy-eH-sqL">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="restaurantCell" id="pzy-eH-sqL" customClass="RestaurantCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="335" height="312"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D5u-ZC-stV">
@@ -342,6 +345,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="cuisineLabel" destination="Kyh-R6-ffE" id="xzw-aV-Gds"/>
+                                            <outlet property="restaurantImageView" destination="aSa-GC-PGd" id="pUx-S5-IUL"/>
+                                            <outlet property="titleLabel" destination="a6i-HD-W4g" id="I2C-Z6-1Ym"/>
                                             <segue destination="p7K-Pg-ILJ" kind="show" id="2SP-Lv-McN"/>
                                         </connections>
                                     </collectionViewCell>
@@ -546,10 +552,15 @@
                                 <segue destination="EIX-1E-sF9" kind="unwind" unwindAction="unwindLocationCancelWithSegue:" id="4kT-0q-i7U"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hF1-lq-IbI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hF1-lq-IbI">
+                            <connections>
+                                <segue destination="EIX-1E-sF9" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="cbC-j4-xfi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Txb-zM-LRq" id="5HF-6n-nWK"/>
+                        <segue destination="EIX-1E-sF9" kind="unwind" unwindAction="unwindLocationDoneWithSegue:" id="6Xt-d1-zLi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWl-wH-nHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

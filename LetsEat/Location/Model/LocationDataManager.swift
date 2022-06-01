@@ -8,21 +8,28 @@
 import Foundation
 
 class LocationDataManager: DataManager {
-    private var locations: [String] = []
+    private var locations: [LocationItem] = []
     
     func fetch() {
-        for location in loadPlist(file: "Locations") {
-            if let city = location["city"], let state = location["state"] {
-                locations.append("\(city), \(state)")
-            }
+        for location in loadData() {
+            locations.append(LocationItem(dict: location))
         }
+    }
+    
+    func loadData() -> [[String: String]] {
+        guard let path = Bundle.main.path(forResource: "Locations", ofType: "plist"),
+              let itemsData = FileManager.default.contents(atPath: path),
+              let items = try! PropertyListSerialization.propertyList(from: itemsData, format: nil) as? [[String: String]] else {
+                  return [[:]]
+              }
+        return items
     }
     
     func numberOfLocationItems() -> Int {
         locations.count
     }
     
-    func locationItem(at index: Int) -> String {
+    func locationItem(at index: Int) -> LocationItem {
         locations[index]
     }
 }
