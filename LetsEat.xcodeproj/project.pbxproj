@@ -16,6 +16,8 @@
 		5B8DACCD2847A46B00654642 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DACCC2847A46B00654642 /* RestaurantCell.swift */; };
 		5B8DACD02847A5DC00654642 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DACCF2847A5DC00654642 /* NoDataView.swift */; };
 		5B8DACD22847A64100654642 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B8DACD12847A64100654642 /* NoDataView.xib */; };
+		5B8DACD42849092800654642 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DACD32849092800654642 /* RatingsView.swift */; };
+		5B8DACD8284917C400654642 /* ReviewFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8DACD7284917C400654642 /* ReviewFormViewController.swift */; };
 		5B8EB6CB283FE64E007A4A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB6CA283FE64E007A4A58 /* AppDelegate.swift */; };
 		5B8EB6CD283FE64E007A4A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB6CC283FE64E007A4A58 /* SceneDelegate.swift */; };
 		5B8EB6D2283FE64E007A4A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB6D0283FE64E007A4A58 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		5B8DACCC2847A46B00654642 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		5B8DACCF2847A5DC00654642 /* NoDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
 		5B8DACD12847A64100654642 /* NoDataView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		5B8DACD32849092800654642 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
+		5B8DACD7284917C400654642 /* ReviewFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewFormViewController.swift; sourceTree = "<group>"; };
 		5B8EB6C7283FE64E007A4A58 /* LetsEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8EB6CA283FE64E007A4A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8EB6CC283FE64E007A4A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				5B7861B8284626070094ECBC /* ReviewForm.storyboard */,
+				5B8DACD32849092800654642 /* RatingsView.swift */,
+				5B8DACD7284917C400654642 /* ReviewFormViewController.swift */,
 			);
 			path = ReviewForm;
 			sourceTree = "<group>";
@@ -409,7 +415,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B8DACD8284917C400654642 /* ReviewFormViewController.swift in Sources */,
 				5B8DACC828476FD300654642 /* LocationItem.swift in Sources */,
+				5B8DACD42849092800654642 /* RatingsView.swift in Sources */,
 				5B8DACCA284775F300654642 /* ExploreHeaderView.swift in Sources */,
 				5B8EB6E8284134C5007A4A58 /* ExploreItem.swift in Sources */,
 				5BFABED12845154E00F2C454 /* DataManager.swift in Sources */,

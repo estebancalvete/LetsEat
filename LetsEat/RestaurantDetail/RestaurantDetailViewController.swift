@@ -27,6 +27,7 @@ class RestaurantDetailViewController: UITableViewController {
     // Cell Three
     
     @IBOutlet var overallRatingLabel: UILabel!
+    @IBOutlet var ratingsView: RatingsView!
     
     // Cell Eight
     
@@ -42,13 +43,20 @@ class RestaurantDetailViewController: UITableViewController {
         super.viewDidLoad()
         initialize()
     }
-
 }
 
 private extension RestaurantDetailViewController {
     func initialize() {
         setupLabels()
         createMap()
+        createRating()
+    }
+    
+    @IBAction func unwindReviewCancel(segue: UIStoryboardSegue) {}
+    
+    func createRating() {
+        ratingsView.rating = 3.5
+        ratingsView.isEnabled = true
     }
     
     func setupLabels() {
