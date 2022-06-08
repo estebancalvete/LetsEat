@@ -344,7 +344,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-2v-lBq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-2v-lBq">
                                                     <rect key="frame" x="15" y="9" width="345" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="28" id="9rS-Fh-Y84"/>
@@ -368,29 +368,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxH-MY-haV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
+                                                <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxH-MY-haV">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="375" height="214"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <segue destination="Kqe-22-GEj" kind="embed" id="Ruf-Pb-4z0"/>
                                                     </connections>
                                                 </containerView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rxH-MY-haV" firstAttribute="top" secondItem="ltd-CZ-uN7" secondAttribute="top" id="0m4-RZ-OKF"/>
-                                                <constraint firstAttribute="trailing" secondItem="rxH-MY-haV" secondAttribute="trailing" id="Kjc-hu-jXe"/>
-                                                <constraint firstItem="rxH-MY-haV" firstAttribute="leading" secondItem="ltd-CZ-uN7" secondAttribute="leading" id="Qgb-7Q-poK"/>
-                                                <constraint firstAttribute="bottom" secondItem="rxH-MY-haV" secondAttribute="bottom" id="apu-Zc-UJa"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Kv7-Iz-et5">
-                                        <rect key="frame" x="0.0" y="1045.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="1045.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kv7-Iz-et5" id="HBn-hr-mKz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-bL-0F2">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-bL-0F2">
                                                     <rect key="frame" x="15" y="10" width="84" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="84" id="5dp-jq-ULo"/>
@@ -400,7 +395,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syM-kD-sxl">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syM-kD-sxl">
                                                     <rect key="frame" x="107" y="12" width="253" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="ZO2-ne-hLb"/>
@@ -420,16 +415,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="217" id="M3y-ef-LmJ">
-                                        <rect key="frame" x="0.0" y="1089.5" width="375" height="217"/>
+                                        <rect key="frame" x="0.0" y="1089" width="375" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M3y-ef-LmJ" id="Ocm-MM-nuO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-xs-IGC">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxn-xs-IGC">
                                                     <rect key="frame" x="17" y="4" width="341" height="208.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-l0-bwa">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eZM-l0-bwa">
                                                             <rect key="frame" x="0.0" y="0.0" width="341" height="208.5"/>
                                                         </imageView>
                                                     </subviews>
@@ -472,10 +467,10 @@
             </objects>
             <point key="canvasLocation" x="4596" y="-349"/>
         </scene>
-        <!--View Controller-->
+        <!--Reviews View Controller-->
         <scene sceneID="s68-WA-D2y">
             <objects>
-                <viewController id="I7Z-yA-lrD" sceneMemberID="viewController">
+                <viewController id="I7Z-yA-lrD" customClass="ReviewsViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b2e-3Y-CNB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -490,7 +485,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="0gs-9C-p7g">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="reviewCell" id="0gs-9C-p7g" customClass="ReviewCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="12.5" y="0.0" width="350" height="208"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -532,7 +527,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZq-Mn-9W5" customClass="RatingsView" customModule="LetsEat" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="25" width="117" height="25"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -559,8 +554,19 @@
                                             <constraint firstItem="G9K-FW-IS7" firstAttribute="leading" secondItem="0gs-9C-p7g" secondAttribute="leading" constant="8" id="znA-Od-JGY"/>
                                         </constraints>
                                         <size key="customSize" width="350" height="208"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="yJy-Me-hbd" id="ECX-jS-cjR"/>
+                                            <outlet property="nameLabel" destination="0Ee-lM-dfY" id="MfU-Pg-hjN"/>
+                                            <outlet property="ratingsView" destination="CZq-Mn-9W5" id="hiM-PJ-wlb"/>
+                                            <outlet property="reviewLabel" destination="Ltw-TD-YVU" id="m55-Ez-AlI"/>
+                                            <outlet property="titleLabel" destination="G9K-FW-IS7" id="7k7-g0-YCH"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="I7Z-yA-lrD" id="bvE-mN-FcP"/>
+                                    <outlet property="delegate" destination="I7Z-yA-lrD" id="0eo-oZ-SRE"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KYY-TR-pBi"/>
@@ -571,15 +577,18 @@
                             <constraint firstItem="G3d-i3-aYj" firstAttribute="top" secondItem="b2e-3Y-CNB" secondAttribute="top" id="yJA-SW-7TR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="G3d-i3-aYj" id="YZa-bU-rpp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3sv-SZ-nNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4244" y="215"/>
         </scene>
-        <!--View Controller-->
+        <!--Photos View Controller-->
         <scene sceneID="OuK-dn-K2Q">
             <objects>
-                <viewController id="Kqe-22-GEj" sceneMemberID="viewController">
+                <viewController id="Kqe-22-GEj" customClass="PhotosViewController" customModule="LetsEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JkL-eZ-cdT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="214"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -594,7 +603,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="photoCell" id="4IM-LY-HG0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="photoCell" id="4IM-LY-HG0" customClass="PhotoCell" customModule="LetsEat" customModuleProvider="target">
                                         <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YQh-qH-zwf">
@@ -624,8 +633,15 @@
                                                 <constraint firstAttribute="bottom" secondItem="6Hp-sB-Lo4" secondAttribute="bottom" id="tP8-Yp-Zdc"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoReview" destination="JIw-dR-3LW" id="JTF-LX-9gf"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kqe-22-GEj" id="EAf-p3-h6i"/>
+                                    <outlet property="delegate" destination="Kqe-22-GEj" id="0Ov-1g-uyc"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z3F-Su-FQe"/>
@@ -636,6 +652,9 @@
                             <constraint firstItem="Pkx-1f-9vB" firstAttribute="trailing" secondItem="Z3F-Su-FQe" secondAttribute="trailing" id="tMK-Qs-0HU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Pkx-1f-9vB" id="D0U-qS-u0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcE-61-elL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
