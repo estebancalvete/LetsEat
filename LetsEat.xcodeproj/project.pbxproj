@@ -58,6 +58,7 @@
 		5BEC372F284FB33500ED62D5 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC372E284FB33500ED62D5 /* ReviewsViewController.swift */; };
 		5BEC37322850E47300ED62D5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC37312850E47300ED62D5 /* PhotoCell.swift */; };
 		5BEC37342850E50D00ED62D5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC37332850E50D00ED62D5 /* PhotosViewController.swift */; };
+		5BEC37362850FD2300ED62D5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC37352850FD2300ED62D5 /* Device.swift */; };
 		5BFABEB82844CD5A00F2C454 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABEB72844CD5A00F2C454 /* ExploreCell.swift */; };
 		5BFABEBD2844DC6C00F2C454 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFABEBC2844DC6C00F2C454 /* LocationViewController.swift */; };
 		5BFABEBF2844E14D00F2C454 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BFABEBE2844E14D00F2C454 /* Locations.plist */; };
@@ -123,6 +124,7 @@
 		5BEC372E284FB33500ED62D5 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		5BEC37312850E47300ED62D5 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5BEC37332850E50D00ED62D5 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		5BEC37352850FD2300ED62D5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		5BFABEB72844CD5A00F2C454 /* ExploreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		5BFABEBC2844DC6C00F2C454 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		5BFABEBE2844E14D00F2C454 /* Locations.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 				5BCBFB1828466790008586AE /* JSON */,
 				5BFABED02845154E00F2C454 /* DataManager.swift */,
 				5B7861BA284627720094ECBC /* Segue.swift */,
+				5BEC37352850FD2300ED62D5 /* Device.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				5B8DACD8284917C400654642 /* ReviewFormViewController.swift in Sources */,
 				5B8DACC828476FD300654642 /* LocationItem.swift in Sources */,
 				5B8DACD42849092800654642 /* RatingsView.swift in Sources */,
+				5BEC37362850FD2300ED62D5 /* Device.swift in Sources */,
 				5B8DACCA284775F300654642 /* ExploreHeaderView.swift in Sources */,
 				5B8EB6E8284134C5007A4A58 /* ExploreItem.swift in Sources */,
 				5B866A9E284A4A7200A91B76 /* PhotoFilterViewController.swift in Sources */,
