@@ -41,7 +41,8 @@ private extension PhotoFilterViewController {
         if let mainImage = self.mainImageView.image {
             var restPhotoItem = RestaurantPhotoItem()
             restPhotoItem.date = Date()
-            restPhotoItem.photo = mainImage.preparingThumbnail(of: CGSize(width: 100, height: 100))
+            restPhotoItem.photo = mainImage
+            //restPhotoItem.photo = mainImage.preparingThumbnail(of: CGSize(width: 100, height: 100))
             if let selRestID = selectedRestaurantID {
                 restPhotoItem.restaurantID = Int64(selRestID)
             }
@@ -143,9 +144,11 @@ extension PhotoFilterViewController: UIImagePickerControllerDelegate, UINavigati
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            self.thumbnail = selectedImage.preparingThumbnail(of: CGSize(width: 100, height: 100))
-            let mainImageViewSize = mainImageView.frame.size
-            self.mainImage = selectedImage.preparingThumbnail(of: mainImageViewSize)
+            self.thumbnail = selectedImage
+            //self.thumbnail = selectedImage.preparingThumbnail(of: CGSize(width: 100, height: 100))
+            //let mainImageViewSize = mainImageView.frame.size
+            self.mainImage = selectedImage
+            //self.mainImage = selectedImage.preparingThumbnail(of: mainImageViewSize)
         }
         picker.dismiss(animated: true) {
             self.showApplyFilterInterface()
